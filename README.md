@@ -1,6 +1,6 @@
 # Billiard Table
 
-[![Build Status](https://travis-ci.org/4fath/billiard-table.svg?branch=master)](https://travis-ci.org/4fath/billiard-table)
+[![Build Status](https://travis-ci.org/4fath/Billiard-Table.svg?branch=master)](https://travis-ci.org/4fath/Billiard-Table)
 
 This is just a solution of http://codeforces.com/problemset/problem/982/E  <br />
 
