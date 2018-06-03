@@ -36,5 +36,13 @@ public class Main {
         if (isInLine) {
             return;
         }
+
+        // check dots and its ways for infinite case
+        boolean isInfinite = Helper.checkInfiniteCase(N, M, x, y, vX, vY);
+        if (isInfinite) {
+            System.out.println("infinite loop");
+            System.out.println(-1);
+            return;
+        }
     }
 }

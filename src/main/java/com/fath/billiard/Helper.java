@@ -82,4 +82,35 @@ public final class Helper {
 
         return false;
     }
+
+    public static boolean checkInfiniteCase(int N, int M, int x, int y, int vX, int vY) {
+        if (x == N || x == 0) {
+            if (vY == 0) {
+                return true;
+            }
+        }
+
+        if (y == M || y == 0) {
+            if (vX == 0) {
+                return true;
+            }
+        }
+
+        if (N == M) {                   // if rectangle is a square
+            if (x != y) {               // and dots is not in diagonal line
+                return true;
+            } else {
+                if (vX * vY == 0) {     // and dots is in diagonal line but its ways directly
+                    return true;
+                }
+            }
+        }
+
+        // todo : check it out
+        if (vX == 0 || vY == 0) {
+            return true;
+        }
+
+        return false;
+    }
 }
