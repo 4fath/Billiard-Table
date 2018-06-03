@@ -56,6 +56,15 @@ public class Rectangle {
         Point nextPoint = Point.make(returnX, returnY, returnVX, returnVY);
         System.out.println("Crashed: " + nextPoint);
 
+        // check nextPoint already discovered within same ways
+        if (crashedList.contains(nextPoint)) {
+            System.err.println("infinite, because hits same point within same way");
+            System.err.println(-1);
+            System.exit(0);
+        } else {
+            crashedList.add(nextPoint);
+        }
+
         return nextPoint;
     }
 
