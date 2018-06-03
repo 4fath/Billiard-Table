@@ -23,5 +23,12 @@ public class Main {
         int y = Integer.valueOf(inputArr[3]);
         int vX = Integer.valueOf(inputArr[4]);
         int vY = Integer.valueOf(inputArr[5]);
+
+        // validate inputs for given description
+        boolean isNotValid = Helper.validateInputs(N, M, x, y, vX, vY);
+        if (isNotValid) {
+            System.out.println("Invalid inputs, please give inputs within below rules.");
+            return;
+        }
     }
 }
