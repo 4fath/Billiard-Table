@@ -16,4 +16,8 @@ public class Rectangle {
         this.M = M;
         this.point = point;
     }
+
+    public void solveProblem() {
+
+    }
 }

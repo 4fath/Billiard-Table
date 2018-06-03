@@ -44,5 +44,10 @@ public class Main {
             System.out.println(-1);
             return;
         }
+
+        // go and solve the challenge
+        Point point = new Point(x, y, vX, vY);
+        Rectangle rectangle = new Rectangle(N, M, point);
+        rectangle.solveProblem();
     }
 }
