@@ -26,4 +26,60 @@ public final class Helper {
         }
         return result;
     }
+
+    public static boolean checkDotsInBorders(int N, int M, int x, int y, int vX, int vY) {
+        if (x == 0 && y != 0) { // dot is in y axis
+            if (vX == 0) {
+                if (vY == 1) {
+                    System.out.println("Point is in border!");
+                    System.out.println(0 + "," + M);
+                    return true;
+                } else {
+                    System.out.println("Point is in border!");
+                    System.out.println(0 + "," + 0);
+                    return true;
+                }
+            }
+        } else if (x == N && y != 0) { // dot is in N line
+            if (vX == 0) {
+                if (vY == 1) {
+                    System.out.println("Point is in border!");
+                    System.out.println(N + "," + M);
+                    return true;
+                } else {
+                    System.out.println("Point is in border!");
+                    System.out.println(N + "," + 0);
+                    return true;
+                }
+            }
+        }
+
+        if (y == 0 && x != 0) { // dot is in x axis
+            if (vY == 0) {
+                if (vX == 1) {
+                    System.out.println("Point is in border!");
+                    System.out.println(N + "," + 0);
+                    return true;
+                } else {
+                    System.out.println("Point is in border!");
+                    System.out.println(0 + "," + 0);
+                    return true;
+                }
+            }
+        } else if (y == M && y != 0) {
+            if (vY == 0) {
+                if (vX == 1) {
+                    System.out.println("Point is in border!");
+                    System.out.println(N + "," + M);
+                    return true;
+                } else {
+                    System.out.println("Point is in border!");
+                    System.out.println(0 + "," + M);
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
 }

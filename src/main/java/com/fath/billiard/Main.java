@@ -30,5 +30,11 @@ public class Main {
             System.out.println("Invalid inputs, please give inputs within below rules.");
             return;
         }
+
+        // check dots and ways, if dot directly goes a spot
+        boolean isInLine = Helper.checkDotsInBorders(N, M, x, y, vX, vY);
+        if (isInLine) {
+            return;
+        }
     }
 }
