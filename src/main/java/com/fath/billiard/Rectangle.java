@@ -59,7 +59,16 @@ public class Rectangle {
         return nextPoint;
     }
 
-    private boolean pointIsASpot(Point nextPoint) {
+    private boolean pointIsASpot(Point p) {
+        if (p.x == 0 && p.y == 0) {
+            return true;
+        } else if (p.x == N && p.y == M) {
+            return true;
+        } else if (p.x == 0 && p.y == M) {
+            return true;
+        } else if (p.x == N && p.y == 0) {
+            return true;
+        }
         return false;
     }
 }
